@@ -1,0 +1,256 @@
+<!-- <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+              @import url('https://fonts.googleapis.com/css?family=Cairo:400,700=arabic');
+              body{
+                          background:url("/static/images/CAT.jpg");
+                          background-repeat: no-repeat;
+                          background-attachment: fixed;
+                          background-size: 100% 100%;
+                      }
+              p.bestavdhoot {
+              position:relative; 
+              width:400px; 
+              padding:20px 40px;
+              margin:10px 10px 80px 40px;
+              background:#b8860b ; 
+              background:-webkit-gradient(linear, 0 0, 0 100%, from(#d6cfc3), to(#b8860b ));
+              background:-moz-linear-gradient(#b8860b , #b8860b );
+              background:-o-linear-gradient(#b8860b, #b8860b);
+              background:linear-gradient(#b8860b, #C8102E);
+              -webkit-border-radius:180px;
+              -moz-border-radius:180px;
+              border-radius:180px;
+              -webkit-box-shadow: -3px 4px 8px #989898;
+              -moz-box-shadow: -3px 4px 8px #989898;
+              box-shadow: -3px 4px 8px #989898;
+              color:#fff;
+              font-size:1em;
+              font-family:'cairo',serif;
+              text-align: right;  
+              }
+              p.bestavdhoot:before {
+              content:"";
+              position:absolute; 
+              bottom:-40px; 
+              left:20px; 
+              background:#b8860b;
+              width:30px; 
+              height:30px;
+              -webkit-border-radius:30px;
+              -moz-border-radius:30px;
+              border-radius:30px;
+              /*add a drop shadow*/
+              -webkit-box-shadow: -3px 3px 4px #989898;
+              -moz-box-shadow: -3px 3px 4px #989898;
+              box-shadow: -3px 3px 8px #989898;
+              }
+              p.bestavdhoot:after {
+              content:"";
+              position:absolute;
+              bottom:-55px;
+              left:0;
+              width:15px;
+              height:15px;
+              background:#b8860b;
+              -webkit-border-radius:15px;
+              -moz-border-radius:15px;
+              border-radius:15px;
+              -webkit-box-shadow: -3px 3px 4px #989898;
+              -moz-box-shadow: -3px 3px 4px #989898;
+              box-shadow: -3px 3px 8px #989898;
+              }
+  </style>
+</head>
+<body>
+  <a href="https://codepen.io/a7rarpress" target="_blank" title="codepen" style="position: fixed; bottom: 10px; right: 10px"><img src="https://tinypic.host/images/2023/03/27/codepen_circle_icon_237905.png" alt=""></a>
+
+<div style="text-align: center;"><b><span style="color: #ffffff;font-family:'cairo',serif;
+"><span><h1>BASEPAPERS DEMERITS</h1></span><span><span> </span> <a href="#" target="_blank"><span style="color: #ff0000;"></span></a></span></span></b></div>
+
+  <p class="bestavdhoot">•	They did not build an own architecture.</p>
+  <p class="bestavdhoot">•	Their process require lot of computational power.</p>
+  <p class="bestavdhoot">•	They did not deploy the model.</p>
+  <p class="bestavdhoot">•	They focused on only segmented process.</p>
+
+<div style="text-align: center;"><b><span style="color: #ffffff;font-family:'cairo',serif;
+"><span><h1>PROPOSED SYSTEM MERITS</h1></span><span><span> </span> <a href="#" target="_blank"><span style="color: #ff0000;"></span></a></span></span></b></div>
+
+    <p class="bestavdhoot">•	We build an own architecture to use train the data.</p>
+    <p class="bestavdhoot">•	We build a web applications for deployment purpose.</p>
+    <p class="bestavdhoot">•	We classify more than 8 micro-organism & bacteria.</p>
+
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .center-split {
+  --center-split-max-width: 30vw;
+}
+
+/* So that content vertically aligns, we set it as a flex item */
+.center-split > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+/* Reset flex and padding rules for media elements because
+   we want them to bleed out */
+.center-split > img,
+.center-split > picture,
+.center-split > video {
+  display: block;
+  padding: 0;
+  
+  /* Stuff is gonna get stretchy, so maintain 
+     some order and crop media */
+  object-fit: cover;
+}
+
+@media (min-width: 720px) {
+  .center-split {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: stretch;
+  }
+  
+  /* Apply our max width to the 
+     direct child of the .center-split child */
+  .center-split > * > * {
+    max-width: var(--center-split-max-width);
+  }
+  
+  /* Set auto margins to push the content into the center */
+  .center-split > *:nth-child(odd) > * {
+    margin: 0 0 0 auto;
+  }
+  
+  .center-split > *:nth-child(even) > * {
+    margin: 0 auto 0 0;
+  }
+  
+  /* Reset max width and margin rules for media elements because
+     we want them to bleed out */
+  .center-split > img,
+  .center-split > picture,
+  .center-split > video {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Presentational styles for this demo */
+.center-split {
+  color: #141414;
+  font-size: 1.35rem;
+}
+
+.center-split {
+  background: #dddddd;
+}
+
+
+.center-split img {
+  filter: saturate(75%);
+}
+
+
+
+/* Global presentational styles */
+
+body {
+  background: #070707;
+  color: #262322;
+  line-height: 1.6;
+  font-family: Georgia, serif;
+}
+
+h1, h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.1;
+  width: 100%;
+}
+
+h1 {
+  color: #254e70;
+  font-size: 2.5rem;
+  max-width: 30ch;
+  padding-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+article > p {
+  font-size: 1.2rem;
+  max-width: 60ch;
+  margin: 1rem 0 2rem 0;
+}
+
+@media (min-width: 720px) {
+  article > h1,
+  article > p {
+    margin-left: 3rem;
+  }
+}
+
+code {
+  font-size: 1.2em;
+  border: 1px solid #c1c1c1;
+  white-space: pre;
+  padding: 2px;
+  font-weight: 700;
+}
+
+</style>
+<body>
+  <article>
+    <figure class="center-split">
+      <img src="https://t3.ftcdn.net/jpg/06/56/93/86/240_F_656938631_yKlYdtRbrodF41WJfAj8tKAhgJque8zm.jpg" alt="The golden light of the setting sun illuminates the Valle de la Luna in the Atacama Desert, Chile" />
+      <figcaption>
+        <h1>BASEPAPERS DEMERITS</h1>
+        <p class="bestavdhoot">•	They did not build an own architecture.</p>
+  <p class="bestavdhoot">•	Their process require lot of computational power.</p>
+  <p class="bestavdhoot">•	They did not deploy the model.</p>
+  <p class="bestavdhoot">•	They focused on only segmented process.</p>
+      </figcaption>
+    </figure>
+    <figure class="center-split">
+      <figcaption>
+        <h1>PROPOSED SYSTEM MERITS</h1>
+        <p class="bestavdhoot">•	We build an own architecture to use train the data.</p>
+    <p class="bestavdhoot">•	We build a web applications for deployment purpose.</p>
+    <p class="bestavdhoot">•	We classify more than 8 micro-organism & bacteria.</p>
+      </figcaption>
+      <img src="https://t3.ftcdn.net/jpg/06/56/81/46/240_F_656814657_O6sPTHyCk9XywksVDUSvrkoh9cENNe2F.jpg" alt="Sunset behind a big-ass mountain" />
+    </figure>
+    
+  </article>
+</body>
+</html>

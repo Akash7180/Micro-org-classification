@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:url("/static/images/89.webp");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        .container{
+            width: 400px;
+            height: 200px;
+            border-style: solid;
+            background-color: rgb(143, 141, 138, 0.3);
+        }
+        form{
+            margin-top: 50px;
+            margin-left: 40px;
+        }
+        </style>
+</head>
+<body>
+    <center><h1 style="color: rgb(255, 255, 255);">Micro Bacteria Organism Using Deep Learning Techniques</h1>
+        <a href="{% url 'Home_4' %}" style="color: white; font-size: 30px; " >Home</a><br><br><br>
+        <div class="container">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p style="margin-right: 170px; color: whitesmoke;">*  This field is requied</p>
+            {{ form.as_p }}
+            <input type="submit" Value='UPLOAD' style="margin-right: 230px;">
+        </form><br><br><br><br>
+        </div>
+    </center><br>
+    {% if obj %}
+    <center>
+        {% if predict == 'FOUND THIS IMAGE IS AMOEBA'%}
+         <h1 style="color: rgb(255, 255, 255);">FOUND THIS IMAGE IS AMOEBA</h1> 
+        <img src="{{ obj.image.url }}" height="250" width="250"><br>
+        <h2 style="color: rgb(255, 255, 255);">Overview:
+          Amoebas are single-celled microorganisms belonging to the domain Eukaryota, specifically within the phylum Amoebozoa. They are characterized by their shape-shifting ability, as they lack a fixed form or cell wall. Amoebas are primarily found in various aquatic environments, including freshwater, marine habitats, and damp soil</h2><br>
+          <h2 style="color: rgb(255, 255, 255);">Anatomy:
+            Cell Structure: Amoebas consist of a simple cell structure with a cell membrane enclosing the cytoplasm. They lack a definite shape, which enables them to change their shape easily.
+            Pseudopodia: Amoebas move and feed by extending finger-like projections called pseudopodia. These temporary extensions of the cell membrane and cytoplasm aid in both movement and capturing food particles</h2>
+            <h2  style="color: rgb(255, 255, 255);">Human Health:
+              Disease-Causing Amoebas: While most amoebas are harmless to humans, certain species can cause diseases. For instance, the genus Entamoeba includes species like Entamoeba histolytica, which can cause amoebic dysentery, a severe gastrointestinal infection.
+              Research and Medical Significance: Amoebas are of interest in medical and scientific research due to their evolutionary significance, ecological roles, and potential implications for human health.
+              </h2>
+        <h2 style="color: rgb(0, 0, 0); text-align: justify;">{{answer | upper}}</h2>
+
+        {% elif predict == 'FOUND THIS IMAGE IS Euglena'%}
+        <h1 style="color: rgb(255, 255, 255);">FOUND THIS IMAGE IS EUGLENA</h1> 
+        <img src="{{ obj.image.url }}" height="250" width="250"><br>
+        <h1  style="color: rgb(255, 255, 255);">Euglena is a genus of single-celled organisms that belong to the phylum Euglenozoa. These organisms are often considered protists and are characterized by their elongated or spindle-shaped bodies, which can exhibit a variety of colors, usually green due to the presence of chloroplasts. Euglenas are found in freshwater environments such as ponds, lakes, and rivers, although some species can also thrive in marine environments</h1>
+
+        <h2 style="color: rgb(255, 255, 255);">Morphology</h2><br>
+        <h2 style="color: rgb(255, 255, 255);">Cell Structure: Euglenas are unicellular organisms that vary in size, typically ranging from 15 to 500 micrometers in length. They are characterized by a flexible cell membrane called a pellicle, which allows them to change shape as they move.</h2>
+        <h2  style="color: rgb(255, 255, 255);">Flagella: Most Euglena species possess one or two long, whip-like flagella that protrude from the anterior end of the cell. These flagella provide locomotion by beating in a coordinated manner.</h2>
+        <h2  style="color: rgb(255, 255, 255);">Eyespot (Stigma): Many species of Euglena contain a light-sensitive organelle called an eyespot or stigma, which helps them detect light. This enables them to move toward light sources for photosynthesis.</h2>
+        <h2 style="color: rgb(255, 255, 255);">Chloroplasts: Euglenas have chloroplasts, the organelles responsible for photosynthesis. These chloroplasts contain chlorophyll, giving Euglenas their characteristic green color</h2> 
+        <h2  style="color: rgb(255, 255, 255);">Paramylon Granules: In addition to chloroplasts, some Euglena species store energy in the form of paramylon granules, which are reserve polysaccharides</h2>     
+
+        <h2 style="color: rgb(0, 0, 0);">{{answer | upper}}</h2>
+
+        {% elif predict == 'FOUND THIS IMAGE IS Hydra'%}
+        <h1 style="color: rgb(255, 255, 255);">FOUND THIS IMAGE IS HYDRA</h1> 
+        <img src="{{ obj.image.url }}" height="250" width="250"><br>
+        <h1 style="color: rgb(255, 255, 255);">Hydra is a small, tube-shaped freshwater creature with tentacles surrounding its mouth. These tentacles are armed with stinging cells that help Hydra catch prey like tiny water animals. Hydras can reproduce by making copies of themselves through budding, and they're also able to grow back body parts if they're cut off. Scientists like studying Hydra because they're simple creatures that can teach us a lot about how living things grow and repair themselves, which might help us understand more about how our bodies work and how we can heal from injuries.</h1>
+
+        <h1 style="color: rgb(255, 255, 255);">Physically, Hydras have a simple body structure consisting of a tubular body column with a mouth surrounded by tentacles at one end and a basal disc at the other. These tentacles, usually ranging from 5 to 12 in number, are armed with specialized stinging cells called nematocysts. When triggered, nematocysts discharge a harpoon-like structure that injects venom into prey or attackers.</h1><br>
+       
+        <h2 style="color: rgb(0, 0, 0);">{{answer | upper}}</h2>
+
+        {% elif predict == 'FOUND THIS IMAGE IS Paramecium'%}
+        <h1 style="color: rgb(255, 255, 255);"> FOUND THIS IMAGE IS PARAMECIUM</h1>
+        <img src="{{ obj.image.url }}" height="250" width="250"><br>
+
+        <h2 style="color: rgb(255, 255, 255);">Paramecium is a single-celled, microscopic organism belonging to the phylum Ciliophora, which is within the kingdom Protista. Paramecia are commonly found in freshwater environments such as ponds, lakes, and streams</h2><br>
+        
+        <h2 style="color: rgb(255, 255, 255);">Morphology</h2>
+        <h2 style="color: rgb(255, 255, 255);">Cell Structure: Paramecia are elongated, slipper-shaped cells, typically ranging from 50 to 300 micrometers in length. They are covered in tiny hair-like structures called cilia, which they use for locomotion and feeding</h2>
+        <h2 style="color: rgb(255, 255, 255);">Oral Groove and Cytostome: Paramecia have an oral groove, a depression in their body surface, leading to a mouth-like opening called a cytostome. The cytostome is surrounded by cilia, which create currents to sweep food particles into the cell.
+        </h2>
+        <h2 style="color: rgb(255, 255, 255);">Pellicle: Paramecia have a flexible outer covering called a pellicle, which provides structural support and allows them to change shape as they move.</h2>
+        <h2 style="color: rgb(255, 255, 255);">Trichocysts: Paramecia have specialized organelles called trichocysts, which are used for defense against predators. When stimulated, trichocysts discharge long, thin threads that can entangle potential attackers</h2>
+        <h2 style="color: rgb(0, 0, 0);">{{answer | upper}}</h2>
+
+        {% elif predict == 'FOUND THIS IMAGE IS Rod bacteria'%}
+        <h1 style="color: rgb(255, 255, 255);">FOUND THIS IMAGE IS ROD BACTERIA</h1>
+        <img src="{{ obj.image.url }}" height="250" width="250"><br>
+
+        <h2 style="color: rgb(255, 255, 255);">Rod bacteria" is a broad term used to describe bacteria that have a rod-like or cylindrical shape. These bacteria are formally known as bacilli, which is a common morphological classification based on their shape. Bacilli can be further categorized into different groups based on various characteristics such as their metabolic pathways, habitat, and staining properties</h2><br>
+      
+        <h2 style="color: rgb(255, 255, 255);">Morphology</h2>
+        <h2 style="color: rgb(255, 255, 255);">Shape: Rod-shaped bacteria, also known as bacilli, are cylindrical or rod-shaped in appearance. They can vary in size from tiny, barely visible cells to larger, more elongated forms</h2>
+        <h2 style="color: rgb(255, 255, 255);">Length and Width: Rod-shaped bacteria can have varying lengths and widths, with some being short and others being long and slender.</h2>
+        <h2 style="color: rgb(255, 255, 255);">Cell Wall: Like all bacteria, rod-shaped bacteria have a cell wall composed of peptidoglycan, a complex polymer that provides structural support and protection</h2>
+        <h2 style="color: rgb(255, 255, 255);">Flagella: Many rod-shaped bacteria are motile, possessing flagella that allow them to move through their environment. The number and arrangement of flagella can vary among different species</h2>
+        <h2 style="color: rgb(0, 0, 0);">{{answer | upper}}</h2>
+
+        {% elif predict == 'FOUND THIS IMAGE IS Spherical bacteria'%}
+        <h1 style="color: rgb(255, 255, 255);">This FOUND THIS IMAGE IS SPHERICAL BACTERIA</h1>
+        <img src="{{ obj.image.url }}" height="250" width="250"><br>
+
+        <h2 style="color: rgb(255, 255, 255);">Spherical bacteria, also known as cocci (singular: coccus), are a group of bacteria characterized by their spherical or nearly spherical shape</h2><br>
+        <h2 style="color: rgb(255, 255, 255);">Morphology</h2>
+        <h2 style="color: rgb(255, 255, 255);">Shape: Spherical bacteria have a round or spherical shape, resembling tiny balls or spheres. Some cocci may be slightly elongated or flattened, but they generally maintain a rounded appearance</h2>
+        <h2 style="color: rgb(255, 255, 255);">Size: Cocci vary in size, ranging from very small, barely visible cells to larger forms that can be seen under a microscope</h2>
+        
+        <h2 style="color: rgb(255, 255, 255);">Cell Wall: Like all bacteria, cocci have a cell wall composed of peptidoglycan, a complex polymer that provides structural support and protection to the cell.</h2>
+        <h2 style="color: rgb(0, 0, 0);">{{answer | upper}}</h2>
+
+        {% elif predict == 'FOUND THIS IMAGE IS Spiral bacteria'%}
+        <h1 style="color: rgb(255, 255, 255);"> FOUND THIS IMAGE IS SPIRAL BACTERIA</h1>
+        <img src="{{ obj.image.url }}" height="250" width="250"><br>
+
+        <h2 style="color: rgb(255, 255, 255);">Spiral bacteria are a group of bacteria characterized by their spiral or helical shape. Unlike spherical (cocci) or rod-shaped (bacilli) bacteria, spiral bacteria have a distinctive spiral or corkscrew morphology. Here's an overview</h2><br>
+        <h2 style="color: rgb(255, 255, 255);">Morphology</h2>
+        <h2 style="color: rgb(255, 255, 255);">Shape: Spiral bacteria have a helical or spiral shape, resembling a twisted or coiled thread. They may have various degrees of curvature, ranging from tightly coiled spirals to more loosely twisted shapes.</h2>
+        <h2 style="color: rgb(255, 255, 255);">Size: Spiral bacteria can vary in size, with some species being relatively small and others being larger and more elongated.</h2>
+        <h2 style="color: rgb(255, 255, 255);">Cell Wall: Like all bacteria, spiral bacteria have a cell wall composed of peptidoglycan, providing structural support and protection</h2>
+        <h2 style="color: rgb(255, 255, 255);">Motility: Many spiral bacteria are motile, possessing flagella or cilia that allow them to move through their environment. The arrangement and number of flagella can vary among different species.</h2>
+        <h2 style="color: rgb(0, 0, 0);">{{answer | upper}}</h2>
+
+        {% elif predict == 'FOUND THIS IMAGE IS Yeast'%}
+        <h1 style="color: rgb(255, 255, 255);">This FOUND THIS IMAGE IS YEAST </h1>
+        <img src="{{ obj.image.url }}" height="250" width="250"><br>
+
+        <h2 style="color: rgb(255, 255, 255);">Yeast is a type of single-celled fungus belonging to the kingdom Fungi. It is commonly used in baking, brewing, and fermentation processes..</h2>
+        
+        <h2 style="color: rgb(255, 255, 255);">Morphology</h2><br>
+        <h2 style="color: rgb(255, 255, 255);">Cell Structure: Yeast cells are typically oval or spherical in shape, although some species may have elongated or irregular shapes. Each yeast cell is a single, independent organism.</h2>
+        <h2 style="color: rgb(255, 255, 255);">Size: Yeast cells are microscopic, usually ranging from 3 to 4 micrometers in diameter, although size can vary among different species</h2>
+        <h2 style="color: rgb(255, 255, 255);">Cell Wall: Like all fungi, yeast cells have a cell wall made of chitin, a complex carbohydrate that provides structural support and protection.</h2>
+        <!-- <h2></h2> -->
+        <h2 style="color: rgb(0, 0, 0);">{{answer | upper}}</h2>
+
+        {% elif predict == 'Unknown'%}
+        <h1 style="color: rgb(255, 255, 255);">Unknown image class predicted! </h1>
+        <img src="{{ obj.image.url }}" height="250" width="250"><br>
+
+
+        
+
+        {% endif %}
+    {% endif %}
+</body>
+</html>
