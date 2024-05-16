@@ -46,5 +46,3 @@ For any inquiries or support regarding the project, feel free to contact [includ
 We would like to acknowledge the following resources and individuals for their contribution to this project:
 - [List acknowledgments here]
 
----
-This README provides an overview of the Microorganism Classification project, detailing its components, usage, contributors, and acknowledgments. For more detailed instructions on setting up and deploying the project, please refer to the project documentation or contact the project contributors.
